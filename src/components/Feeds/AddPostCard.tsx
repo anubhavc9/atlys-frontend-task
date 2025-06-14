@@ -34,15 +34,15 @@ export default function AddPostCard({
     }
     if (text.trim() === "") return;
     setPosts([
-      ...posts,
       {
         id: Date.now(),
         name: "You",
-        avatar: "https://avatar.iran.liara.run/public/12",
+        avatar: "https://randomuser.me/api/portraits/men/5.jpg",
         emoji: "😊",
         content: text,
         createdOn: new Date().toISOString(),
       },
+      ...posts,
     ]);
     setText("");
   };
